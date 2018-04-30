@@ -134,7 +134,7 @@ def _calc_incidence_right(time, status, weights=None):
 
         se.append(np.sqrt(v))
 
-    return ip, se, utime, n, rtime
+    return ip, se, utime, n, d
 
 
 def _checkargs(time, status, entry, freq_weights, exog):
@@ -257,8 +257,8 @@ class CumIncidenceRight(object):
         self.cinc = x[0]
         self.cinc_se = x[1]
         self.times = x[2]
-        self.d = x[3]
-        self.rtime = x[4]
+        self.n = x[3]
+        self.d = x[4]
         self.title = "" if not title else title
 
 
