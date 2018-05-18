@@ -53,7 +53,7 @@ curdir = os.path.abspath(os.path.dirname(__file__))
 README = open(pjoin(curdir, "README.rst")).read()
 CYTHON_EXCLUSION_FILE = 'cythonize_exclusions.dat'
 
-DISTNAME = 'aziz_statsmodels'
+DISTNAME = 'statsmodels'
 DESCRIPTION = 'Statistical computations and models for Python'
 LONG_DESCRIPTION = README
 MAINTAINER = 'Skipper Seabold, Josef Perktold'
