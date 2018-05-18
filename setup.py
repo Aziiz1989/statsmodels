@@ -169,7 +169,7 @@ def check_dependency_versions(min_versions):
 
 MAJ = 0
 MIN = 9
-REV = 0
+REV = 1
 ISRELEASED = True
 VERSION = '%d.%d.%drc1' % (MAJ,MIN,REV)
 
