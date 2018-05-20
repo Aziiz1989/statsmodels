@@ -90,8 +90,8 @@ def _calc_incidence_right(time, status, weights=None):
 
     # Calculate the all-cause survival function.
     status0 = (status >= 1).astype(np.float64)
-    sp, utime, rtime, n, d = _calc_survfunc_right(time, status0, weights,
-                                                  compress=False, retall=False)
+    sp, surv_se, utime, rtime, n, d = _calc_survfunc_right(time, status0, weights,
+                                                  compress=False, retall=True)
 
     ngrp = int(status.max())
 
@@ -134,7 +134,7 @@ def _calc_incidence_right(time, status, weights=None):
 
         se.append(np.sqrt(v))
 
-    return ip, se, utime, n, d, sp
+    return ip, se, utime, n, d, sp, surv_se
 
 
 def _checkargs(time, status, entry, freq_weights, exog):
@@ -260,6 +260,7 @@ class CumIncidenceRight(object):
         self.n = x[3]
         self.d = x[4]
         self.sp = x[5]
+        self.surv_se[6]
         self.title = "" if not title else title
 
 
