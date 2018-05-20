@@ -260,7 +260,7 @@ class CumIncidenceRight(object):
         self.n = x[3]
         self.d = x[4]
         self.sp = x[5]
-        self.surv_se[6]
+        self.surv_se = x[6]
         self.title = "" if not title else title
 
 
